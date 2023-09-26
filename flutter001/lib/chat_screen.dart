@@ -24,7 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     chatGPT = OpenAI.instance.build(
-        token: dotenv.env["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"],
+        token: dotenv.env["openAikey"],
         baseOption: HttpSetup());
     super.initState();
   }
@@ -72,7 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void insertNewData(String response, {bool isImage = false}) {
     ChatMessage botMessage = ChatMessage(
       text: response,
-      sender: "Dost",
+      sender: "",
       isImage: isImage,
     );
 
