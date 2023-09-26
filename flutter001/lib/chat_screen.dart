@@ -72,7 +72,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void insertNewData(String response, {bool isImage = false}) {
     ChatMessage botMessage = ChatMessage(
       text: response,
-      sender: "",
+      sender: "GPT",
       isImage: isImage,
     );
 
